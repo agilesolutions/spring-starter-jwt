@@ -7,7 +7,7 @@
 * [JWT and roles](https://medium.com/@hantsy/protect-rest-apis-with-spring-security-and-jwt-5fbc90305cc5)
 * [JWT resttemplate](https://www.kingsware.de/2019/07/20/spring-boot-passthrough-jwt-with-resttemplate/)
 * [testtemplate interceptor](https://stackoverflow.com/questions/46729203/propagate-http-header-jwt-token-over-services-using-spring-rest-template)
-* []()
+* [conditional beans](https://reflectoring.io/spring-boot-conditionals/)
 * []()
 
  think it is better to add the interceptor specifically to the RestTemplate, like this:

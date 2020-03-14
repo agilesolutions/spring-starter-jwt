@@ -1,0 +1,17 @@
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### VS Code ###
+.vscode/
+
+
+**/.classpath
+**/.project
+**/.settings
+**/build.bat
+**/target
+**/bin/

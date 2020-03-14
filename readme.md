@@ -1,4 +1,4 @@
-# spring boot data ldap
+# Spring boot starter with JWT request filter and JWT REST template
 
 ## JWT request filters
 

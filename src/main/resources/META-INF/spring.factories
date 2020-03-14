@@ -1,0 +1,1 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=com.agilesolutions.security.config.WebSecurityConfig

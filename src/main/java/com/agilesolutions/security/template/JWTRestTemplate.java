@@ -4,20 +4,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
+import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.client.RestTemplate;
 
-@Configuration
-public class JWTRestTemplate {
+@Component
+public class JWTRestTemplate extends RestTemplate {
+	
+	
 
-	@Bean
-	public RestTemplate restTemplate() {
-
-		RestTemplate restTemplate = new RestTemplate();
-
-		List<ClientHttpRequestInterceptor> interceptors = restTemplate.getInterceptors();
+	public JWTRestTemplate() {
+		super();
+		List<ClientHttpRequestInterceptor> interceptors = super.getInterceptors();
 
 		if (CollectionUtils.isEmpty(interceptors)) {
 			interceptors = new ArrayList<>();
@@ -25,9 +24,8 @@ public class JWTRestTemplate {
 
 		interceptors.add(new RestTemplateHeaderModifierInterceptor());
 
-		restTemplate.setInterceptors(interceptors);
-
-		return restTemplate;
+		super.setInterceptors(interceptors);
 	}
+
 
 }

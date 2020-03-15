@@ -12,6 +12,43 @@
 * [logback conditional logging](http://logback.qos.ch/manual/configuration.html#conditional)
 * [Requires Janino](http://logback.qos.ch/setup.html#janino)
 
+
+## Conditional Logging with Janino
+
+```
+
+<!-- The org.codehaus.janino:commons-compiler:3.0.6 dependency -->
+<!-- will be automatically pulled in by Maven's transitivity rules -->
+<dependency>
+  <groupId>org.codehaus.janino</groupId>
+  <artifactId>janino</artifactId>
+  <version>3.0.6</version>
+</dependency>
+
+
+<configuration>
+
+    <if condition='"${spring.profiles.active}".contains("profile1")'>
+        <then>
+         <!-- do whatever you want for profile1 -->
+        </then>
+    </if>
+
+    <if condition='"${spring.profiles.active}".contains("profile2")'>
+        <then>
+         <!-- do whatever you want for profile2 -->
+        </then>
+    </if>
+
+    <!-- common config -->
+
+</configuration>
+
+```
+
+## JWT Rest Template
+
+
  think it is better to add the interceptor specifically to the RestTemplate, like this:
  
  class RestTemplateHeaderModifierInterceptor(private val authenticationService: IAuthenticationService) : ClientHttpRequestInterceptor {

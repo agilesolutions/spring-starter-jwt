@@ -8,7 +8,9 @@
 * [JWT resttemplate](https://www.kingsware.de/2019/07/20/spring-boot-passthrough-jwt-with-resttemplate/)
 * [testtemplate interceptor](https://stackoverflow.com/questions/46729203/propagate-http-header-jwt-token-over-services-using-spring-rest-template)
 * [conditional beans](https://reflectoring.io/spring-boot-conditionals/)
-* []()
+* [conditional logging stackoverflow](https://stackoverflow.com/questions/29429073/spring-boot-logback-and-logging-config-property/29430074)
+* [logback conditional logging](http://logback.qos.ch/manual/configuration.html#conditional)
+* [Requires Janino](http://logback.qos.ch/setup.html#janino)
 
  think it is better to add the interceptor specifically to the RestTemplate, like this:
  
